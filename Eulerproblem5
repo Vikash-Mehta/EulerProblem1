@@ -1,0 +1,53 @@
+import java.lang.Math;
+import java.text.*;
+
+public class Problem5{
+
+public static long hcf(long n1,long n2) {
+
+    if ( n1 == n2 ) { return n1; }
+
+   else{
+
+    long r;
+
+    while ( n2 != 0 ) {
+
+        r  = n1 % n2;
+
+        n1 = n2;
+
+        n2 = r;
+	}
+    }
+
+    return n1;
+
+}
+
+
+
+public static long lcm(long n1,long n2) {
+
+    return (n1 * n2 /hcf(n1,n2));
+
+}
+
+
+public static void main(String args[]) {
+
+long n = 2;
+
+for (int i=3; i <= 20; i++) {
+
+    n = lcm(i, n);
+
+   
+
+}
+
+System.out.println("Smallest positive number: " +n);
+
+}
+
+}
