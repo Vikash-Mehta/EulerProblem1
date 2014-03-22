@@ -1,0 +1,24 @@
+import java.text.*;
+
+public class Problem2 {
+
+   public static void main(String []  args)
+   {
+    	int a=1, b=1, c=0, sum=0;
+
+            	 while (a<=4000000 || b<=4000000 ||c<=4000000)
+ 	       	  {
+                           c=a+b; 
+	                       if (c%2==0)
+				{          	
+				 sum=sum +c;
+   				}
+
+                            a=b;
+                            b=c;
+            	 }
+
+    System.out.println("Sum of the even fibonacci: "+sum);
+ 
+   }
+}
