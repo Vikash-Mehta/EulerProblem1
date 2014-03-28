@@ -5,11 +5,14 @@ public class Problem13{
 
 
 	public String Sum() {
+	
 		BigInteger sum = BigInteger.ZERO;
+		
 		for (String number : str)
+		
 			sum = sum.add(new BigInteger(number));
-		return sum.toString().substring(0, 10);
-	}
+			return sum.toString().substring(0, 10);
+ 		}
 
 
 	private static String[] str= {
@@ -114,9 +117,9 @@ public class Problem13{
 		"20849603980134001723930671666823555245252804609722",
 		"53503534226472524250874054075591789781264330331690",};
 
-public static void main(String[] args) 
-{
-	System.out.println(new Problem13().Sum());
-}
+	public static void main(String[] args){
+	
+		System.out.println(new Problem13().Sum());
+	}
 
 }
