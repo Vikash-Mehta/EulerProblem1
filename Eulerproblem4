@@ -3,61 +3,82 @@ import java.text.*;
 
 public class Problem4{
 
-public static int reverse(int n){
+  public static int reverse(int n){
+        
         int i = 0;
+        
         while (n != 0){
+            
             int r = n % 10;
             i = (i * 10) + r;
             n /= 10;
 	}
+        
         return i;
-}
+  }
  
-public static boolean isPalindrome(int n) {
+ 
+  
+  public static boolean isPalindrome(int n){
+  
         return(n == reverse(n)) ? true : false;
-}
+        
+  }
  
-public static void main(String[] args){
+
+
+  public static void main(String[] args){
 
         int jHi=0, jlow=0, dec=0;
-	int P=1,temp=1;
+	int P=1;
+	int temp=1;
 	int i=999,j=1;
 
- for(i=999; i>=100; i--)
-{
+        for(i=999; i>=100; i--){
 	
-	if(i%11==0){	 
-	jHi=999;
-	jlow=100;
-        dec=1;
-	}
+	    if(i%11==0){	 
+	    
+	       jHi=999;
+	       jlow=100;
+               dec=1;
+	     }
 		
-	else{
-	jHi=990;
-	jlow=100;
-	dec=11;
-	}
+
+            else{
+
+               jHi=990;
+	       jlow=100;
+	       dec=11;
+	     }
 	
 	
-   for(j=jHi; j>=jlow; j=j-dec){
+  
+             for(j=jHi; j>=jlow; j=j-dec){
                 
-	P=i*j;
+	
+	        P=i*j;
 		
 
-               if (isPalindrome(P))
-		{       if(temp<P)
-			{temp=P;}
+                if (isPalindrome(P)){
+                
+                   if(temp<P){
+                   
+                   temp=P;
+                   
+                   }
 
-			break;
+		break;
 		}
 		
 		else
-			continue;
-    }
+		    continue;
+       
+               }
 
 
-}
+       }
 
-System.out.println("Largest Palindrome is " +temp);
-}
+       System.out.println("Largest Palindrome is " +temp);
+   }
+   
 }
