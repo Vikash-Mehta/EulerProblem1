@@ -1,7 +1,7 @@
-public class Problem12
-{
-	private static int countFactors(int triangle)
-	{
+public class Problem12{
+
+	private static int countFactors(int triangle){
+	
 		int factors = 0;
  
 		for (int i = 1; i <= Math.sqrt(triangle); i++)
@@ -14,41 +14,50 @@ public class Problem12
 	}
  
 
-	public static boolean prime(int n)
-         {
-           	 	int j;	
-           		boolean flag=true;
-			int res=1;
+	public static boolean prime(int n){
+           	 	
+           	int j;	
+           	boolean flag=true;
+		int res=1;
  
-                           	for(j=2;j<=n/2;j++)
-                           	{
-                                          	res=n%j;
-                                          	if(res==0)
-                                          	{
-                                                         	flag=false;
-                                                         	break;
-                                          	}
-                           	}
-                           	if(flag)
-                                          	return(true);
-                           	else
-                           	           	return(false);
-           }
+                for(j=2;j<=n/2;j++){
+                                          
+                      res=n%j;
+                                          	
+                      if(res==0){
+                                                         
+                         flag=false;
+                         break;
+                      
+                      }
+                 }
+                           
+                          
+                 if(flag)
+                         return(true);
+                           	
+                 else
+                         return(false);
+                         
+        }
 
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
+	
 		int i = 1;
 		int triangle=1;
 		int NumFactors = 0;
  
-		while (NumFactors <= 500)
-		{
+		while (NumFactors <= 500){
+		
 			triangle = i * ( i + 1 ) / 2;
-			if (!prime(triangle))
-			{
+			
+			if (!prime(triangle)){
+			
 			NumFactors = countFactors(triangle);
+			
 			}
+			
 			i++;
 
 		}
@@ -56,4 +65,5 @@ public class Problem12
 		System.out.println(+triangle);
 		
 	}
+	
 }
