@@ -1,37 +1,40 @@
 import java.lang.*;
 
-public class Problem9 
-{
+public class Problem9 {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args){
+         
           int a=1,b=1,c=1,d=1,e=1,f=1;
 	  int product=1;
 
-        for (int i=1; i < 500; i++)
-        {
-            for (int j=i+1; j<500; j ++)
-	    {     
+          for (int i=1; i < 500; i++){
+          
+               for (int j=i+1; j<500; j ++){     
 		  
-                  a =i;
-                  b =j;
-                  c = 1000-i-j;
+                    a =i;
+                    b =j;
+                    c = 1000-i-j;
 		  
 
-      	      if ((a*a+b*b)==(c*c)) 
-	      {    d=a;
-                   e=b;
-		   f=c;
-                   product=a*b*c;
-		   break;
-              }
+      	           if ((a*a+b*b)==(c*c)){   
+      	            
+      	               d=a;
+                       e=b;
+		       f=c;
+                    
+                       product=a*b*c;
+		   
+		       break;
+                    }
 
               }  
-        } 
-	    System.out.println(+d);
-	    System.out.println(+e);
-            System.out.println(+f);
-            System.out.println(+product); 
+        
+         } 
+	    
+	  System.out.println(+d);
+	  System.out.println(+e);
+          System.out.println(+f);
+          System.out.println(+product); 
     }
    
 }
