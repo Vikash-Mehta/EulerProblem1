@@ -2,22 +2,25 @@ public class Problem6{
   
  
     
-private static int sum(int N){
+     private static int Sum(int N){
 
-  int a,b;
+         int a,b;
      
-      a = N*(N + 1)/ 2;
-      b = N*(N + 1)*(2*N + 1)/6;
+         a = N*(N + 1)/ 2;
+         b = N*(N + 1)*(2*N + 1)/6;
   
-	return((a*a)- b);
- }
+         return((a*a)- b);
+   
+      }
 
-public static void main(String[] args) 
- {
-    int N = 100;
+
+    public static void main(String[] args){
+    
+         int n = 100;
   
-    System.out.println(sum(N));
- }
+         System.out.println(Sum(n));
+    
+    }
   
 }
 
