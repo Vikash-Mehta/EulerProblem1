@@ -1,0 +1,49 @@
+
+
+public class Problem15 {
+
+  public static void main( String[] args ) {
+    
+    final int max = 20;
+
+    int[] numerator=new int[max];
+    int[] denominator=new int[max];
+    int i,j;
+ 
+ 
+    for (i = 0; i < max; i++){
+    
+      denominator[i] = i+1;
+      numerator[i] = i+max+1;
+  
+    }
+
+  
+    for (i=0; i < max; i++){
+  
+      for (j=0; j < max; j++){
+    
+        if ((denominator[i] != 1) && (!(numerator[j] % denominator[i]))){
+      
+            numerator[j] = numerator[j] / denominator[i];
+            denominator[i] = 1;
+        
+        }
+      }
+    }
+ 
+    long num = 1L;
+    long denom = 1L;
+
+    for (i=0; i < max; i++){
+    
+      num *= numerator[i];
+      denom *= denominator[i];
+    }
+
+    long ans= 1L;
+    ans=num/denom;
+    System.out.println(+ans);
+  
+  }
+}
