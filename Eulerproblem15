@@ -24,8 +24,12 @@ public class Problem15 {
     for (i=0; i < max; i++){
   
       for (j=0; j < max; j++){
+
+	int a=numerator[j] % denominator[i];
+	
+	boolean b = (a == 0);
     
-        if ((denominator[i] != 1) && (!(numerator[j] % denominator[i]))){
+        if ((denominator[i]!=1) && ((b))){
       
             numerator[j] = numerator[j] / denominator[i];
             denominator[i] = 1;
