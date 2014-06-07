@@ -1,0 +1,62 @@
+import java.text.*;
+import java.math.BigInteger;
+import java.lang.Math;
+import java.lang.*;
+
+public class Problem3{
+           	
+	public static long prime(long n){
+	
+		long i,res;	
+           	boolean flag=true;
+ 		long max = (long)(Math.sqrt(n + 0.0)) + 1;
+                
+                for(i=2; i<=max; i++){
+                                        
+                     res=n%i;
+                     
+                     if(res==0){
+                         
+                          flag=false;
+                          break;
+                      }
+                           
+                   }
+                           
+                   
+                   if(flag)
+                        return(n);
+                    
+                   else
+                        return(0);
+           }
+ 
+ 
+ 
+	public static void main(String[] args){                         	
+   
+		 long n=600851475143L;
+	         long number;
+		 
+                           	
+       		for(long i=n; i>=2; i--){
+       		
+			if(n%i == 0){
+			
+			     number=prime(i);
+		         }
+		
+			
+			else
+		  		continue;
+
+			if(number!=0){
+			
+				 System.out.println("Required prime factor is: "+number);
+				 break;
+		}
+	}
+ 
+}
+   
+ }
